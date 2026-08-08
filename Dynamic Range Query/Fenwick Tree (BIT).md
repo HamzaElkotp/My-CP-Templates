@@ -5,20 +5,20 @@ struct FenwickTree{
    int n;  
    vector<int> bit;  
    FenwickTree(int n){  
-     this->n = n;  
-     bit.resize(n+1, 0); // NOTE 0
+      this->n = n;  
+      bit.resize(n+1, 0); // NOTE 0
    }  
    int getParent(int indx) { return indx - (indx & -indx);}  
    int getNext(int indx){ return indx + (indx & -indx);}  
    void update(int indx, int delta){  
       while(indx<=n){  
          bit[indx] += delta; // NOTE 1
-         indx = getNext(indx);  
+         indx = getNext(indx);
       }  
    }  
    void construct(vector<int> &vct){ // O(N logN)  
       for(int i=0; i<vct.size(); i++)  
-         update(i+1, vct[i]);  
+         update(i+1, vct[i]);
    }  
    void constructFast(vector<int> &vct){ // O(N)  
       for(int i=0; i<vct.size(); i++)  
@@ -59,4 +59,4 @@ struct FenwickTree{
 | NOTE 4 | sum ^= bit[indx];             | sum = (sum * bit[indx]) % MOD;                    |
 | NOTE 5 | return query(R) ^ query(L-1); | return (query(R) * modInverse(query(L-1))) % MOD; |
 | NOTE 6 | update(R+1, delta);           | update(R+1, modInverse(delta));                   |
-
+ 
