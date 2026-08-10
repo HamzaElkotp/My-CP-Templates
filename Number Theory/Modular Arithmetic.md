@@ -1,15 +1,3 @@
-```cpp
-vector<int> getDivisors(int n) {  
-   vector<int>v;
-   for(int i=1;i*i<=n;i++) {  
-      if(n%i==0) {  
-         v.push_back(i);  
-         if (n/i != i) v.push_back(n/i);  
-      }
-   }
-   return v;
-}
-```
 
 ```cpp
 int fastPower(int base, int exp) {  
@@ -39,15 +27,3 @@ int div(int a, int b) {
    return (a * inv) % MOD;
 }
 ```
-
-```cpp
-int mx = 1e6+10;  
-vector<bool> prims(mx, true);  
-void Sieve(){  
-   prims[0]=prims[1]=false;  
-   for(int i=2; i*i<mx; i++)
-      if(prims[i]) for(int o=i*i; o<mx; o+=i) prims[o]=false;
-}
-```
-
-
