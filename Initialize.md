@@ -13,13 +13,6 @@ using namespace std;
 #define allv(v) v.begin(), v.end()  
 #define rallv(v) v.rbegin(), v.rend()
 ```
-###### Ordered Set
-```cpp
-#include <ext/pb_ds/assoc_container.hpp>
-#include <ext/pb_ds/tree_policy.hpp>
-using namespace __gnu_pbds;
-#define ordered_set tree<int, null_type,less<>, rb_tree_tag,tree_order_statistics_node_update>
-```
 ##### File
 ```Cpp
 freopen("input.txt", "r", stdin);
