@@ -14,6 +14,10 @@ struct FenwickTree{
          indx = getNext(indx);
       }
    }
+   void updateRange(int L, int R, int delta){
+      update(L, delta);
+      update(R+1, -delta);
+   }
    int query(int indx){
       int sum=0;
       while(indx > 0){
@@ -25,9 +29,5 @@ struct FenwickTree{
    int queryRange(int L, int R){
       if(L>R) return 0;
       return query(R) - query(L-1);
-   }
-   void updateRange(int L, int R, int delta){
-      update(L, delta);
-      update(R+1, -delta);
    }
 };
