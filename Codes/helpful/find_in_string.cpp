@@ -1,1 +1,0 @@
-str.find('x') != variant_npos
