@@ -3,13 +3,13 @@ using namespace std;
 
 #define ll long long
 namespace IO {
-#define in() ( { int a ; scanf("%d",&a); a; } )
-#define LL() ( { ll a ; scanf("%lld",&a); a; } )
-#define ULL() ( { ull a ; scanf("%llu",&a); a; } )
-#define DD() ({ double a; scanf("%lf", &a); a;})
-#define CC() ( { char a ; scanf("%c",&a); a; } )
-#define pf1(a) printf("%d\n",a)
-#define pf1ll(a) printf("%lld\n",a)
+  #define in() ( { int a ; scanf("%d",&a); a; } )
+  #define LL() ( { ll a ; scanf("%lld",&a); a; } )
+  #define ULL() ( { ull a ; scanf("%llu",&a); a; } )
+  #define DD() ({ double a; scanf("%lf", &a); a;})
+  #define CC() ( { char a ; scanf("%c",&a); a; } )
+  #define pf1(a) printf("%d\n",a)
+  #define pf1ll(a) printf("%lld\n",a)
 }
 using namespace IO;
 const int N = 3e5 + 9;
@@ -91,4 +91,3 @@ int32_t main() {
   }
   return 0;
 }
-// https://www.spoj.com/problems/METEORS/
